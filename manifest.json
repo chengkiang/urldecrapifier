@@ -1,0 +1,16 @@
+{
+  "name": "URL Decrapifier",
+  "version": "1.0",
+  "description": "URL Decrapifier",
+  "manifest_version": 2,
+  "permissions": [
+    "activeTab", "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [ "http://*/*", "https://*/*" ],
+      "js": ["decrap.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
