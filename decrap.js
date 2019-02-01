@@ -1,17 +1,21 @@
-const amzRegex = /(?:ref|qid|sr|keywords|pd_.*?|pf_.*?|refRID|psc|_encoding).*?(?:\&|$)/gi;
-const googleRegex = /(?:utm_|fbclid)(?:.*)(?:&|\?|\#)/gi;
-const fbRegex = /fbclid\=.*?$/gi;
-const qoo10Regex1 = /(?:__ar|pct|jaehuid).*?(?:\&|$)/gi;
+const url = window.location.toString();
 
-const trailingQuestionMark = /\?$/gi;
-const trailingAmpersand = /\&$/gi;
+function decrap(url) {
+  const regexes = [
+    /(?:ref|qid|sr|keywords|pd_.*?|pf_.*?|refRID|psc|_encoding).*?(?:\&|$)/gi,  // Amazon
+    /(?:utm_)(?:.*)(?:&|\?|\#)/gi, // Google utm
+    /(?:fbclid|gclid)\=.*?$/gi, // Facebook bbclid / Google gclid
+    /(?:__ar|pct|jaehuid).*?(?:\&|$)/gi, // Qoo10
+    /(?:version|scm|spm|item_id|abtest|from|acm|pos|abbucket|up_id|wh_weex|mp).*?(?:\&|$)/gi,
+    /\?$/gi, // Trailing ?
+    /\&$/gi // Trailing &
+  ];
 
-var decrapped = window.location.toString().replace(amzRegex, '')
-  .replace(googleRegex, '')
-  .replace(fbRegex, '')
-  .replace(qoo10Regex1, '')
-  .replace(trailingQuestionMark, '')
-  .replace(trailingAmpersand, '');
+  regexes.forEach(r => {
+    url = url.replace(r, '');
+  })
 
-console.log('decrapped', decrapped);
-window.history.pushState(null, '', decrapped);
+  return url;
+}
+
+window.history.pushState(null, '', decrap(url));
