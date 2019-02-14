@@ -7,6 +7,7 @@ function decrap(url) {
     /(?:fbclid|gclid)\=.*?$/gi, // Facebook bbclid / Google gclid
     /(?:__ar|pct|jaehuid).*?(?:\&|$)/gi, // Qoo10
     /(?:version|scm|spm|item_id|abtest|from|acm|pos|abbucket|up_id|wh_weex|mp)\=.*?(?:\&|$)/gi, // Lazada
+    /(?:mkt_tok)\=.*?(?:\&|$)/gi, // Medium
     /(?:\?|\&)$/gi, // Trailing ? or &
   ];
 
