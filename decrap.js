@@ -19,4 +19,8 @@ function decrap(url) {
   return url;
 }
 
-window.history.pushState(null, '', decrap(url));
+const decrapped = decrap(url);
+
+if (decrapped !== url) {
+  window.history.pushState(null, '', decrap(url));
+}
