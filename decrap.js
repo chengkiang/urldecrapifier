@@ -12,6 +12,7 @@ function decrap(url) {
     /(?:sc_src|sc_lid|sc_uid|sc_llid|sc_eh)\=.*?(?:\&|$)/gi, // HWZ Mailer,
     /(?:scid|mv[12]?)\=.*?$/, // Behance
     /(?:gps-id|scm_id|scm_url?)\=.*?$/, // AliExpress
+    /(?:wt\.mc_id?)\=.*?$/, // WebTrends
     /(?:\?|\&)$/gi, // Trailing ? or &
   ];
 
