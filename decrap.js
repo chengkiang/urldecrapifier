@@ -13,6 +13,7 @@ function decrap(url) {
     /(?:scid|mv[12]?)\=.*?$/, // Behance
     /(?:gps-id|scm_id|scm_url?)\=.*?$/, // AliExpress
     /(?:wt\.mc_id?)\=.*?$/, // WebTrends
+    /(?:guccounter|guce_referrer|guce_referrer_sig)\=.*?$/, // Yahoo
     /(?:\?|\&)$/gi, // Trailing ? or &
   ];
 
