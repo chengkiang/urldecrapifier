@@ -14,6 +14,8 @@ function decrap(url) {
     /(?:gps-id|scm_id|scm_url?)\=.*?$/, // AliExpress
     /(?:wt\.mc_id?)\=.*?$/, // WebTrends
     /(?:guccounter|guce_referrer|guce_referrer_sig)\=.*?$/, // Yahoo
+    /(?:ftag|bhid)\=.*?$/, // Cnet
+    /(?:mc_cid|mc_eid)\=.*?$/, // Some other tracking shit
     /(?:\?|\&)$/gi, // Trailing ? or &
   ];
 
