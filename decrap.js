@@ -6,7 +6,7 @@ function decrap(url) {
     /(?:utm_.*?)(\&|$)/gi, // Google utm
     /(?:fbclid|gclid)\=.*?$/gi, // Facebook bbclid / Google gclid
     /(?:__ar|pct|jaehuid).*?(?:\&|$)/gi, // Qoo10
-    /(?:version|scm|spm|item_id|abtest|from|acm|pos|abbucket|up_id|wh_weex|mp|laz_trackid|hybrid|pvid|clickTrackInfo|search)\=.*?(?:\&|$)/gi, // Lazada
+    /(?:version|scm|spm|item_id|abtest|from|acm|pos|abbucket|up_id|wh_weex|mp|laz_trackid|hybrid|pvid|clickTrackInfo|search|ef_id|s_kwcid|exlaz)\=.*?(?:\&|$)/gi, // Lazada
     /(?:mkt_tok)\=.*?(?:\&|$)/gi, // Medium,
     /(?:rv|gj|_xtd|_af|_af_eid)\=.*?(?:\&|$)/gi, // Meetup
     /(?:sc_src|sc_lid|sc_uid|sc_llid|sc_eh)\=.*?(?:\&|$)/gi, // HWZ Mailer,
