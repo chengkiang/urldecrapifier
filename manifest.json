@@ -2,9 +2,9 @@
   "name": "URL Decrapifier",
   "version": "1.0",
   "description": "Removes crud from the URL in the address bar, e.g. utm parameters, fbclid, Amazon crap, etc.",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "permissions": [
-    "activeTab", "tabs"
+    "activeTab"
   ],
   "content_scripts": [
     {

@@ -15,7 +15,7 @@ function decrap(url) {
     /(?:wt\.mc_id?)\=.*?$/, // WebTrends
     /(?:guccounter|guce_referrer|guce_referrer_sig)\=.*?$/, // Yahoo
     /(?:ftag|bhid)\=.*?$/, // Cnet
-    /(?:mc_cid|mc_eid)\=.*?$/, // Some other tracking shit
+    /(?:mc_cid|mc_eid|cid)\=.*?$/, // Some other tracking shit
     /(?:s)\=\d+?$/, // Twitter shit
     /(?:\?|\&)$/gi, // Trailing ? or &
   ];
