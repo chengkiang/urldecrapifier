@@ -4,6 +4,8 @@ function decrap(url) {
   const regexes = [
     /(?:ref\=|qid|sr\=|keywords|pd_.*?|pf_.*?|refRID|psc|_encoding).*?(?:\&|$)/gi,  // Amazon
     /(?:utm_.*?)(\&|$)/gi, // Google utm
+    /(?:gad_.*?)(\&|$)/gi, // dunno-what tracking
+    /(?:gbraid.*?)(\&|$)/gi, // dunno-what tracking
     /(?:fbclid|gclid)\=.*?$/gi, // Facebook bbclid / Google gclid
     /(?:__ar|pct|jaehuid).*?(?:\&|$)/gi, // Qoo10
     /(?:version|scm|spm|item_id|abtest|from|acm|pos|abbucket|up_id|wh_weex|mp|laz_trackid|hybrid|pvid|clickTrackInfo|search|ef_id|s_kwcid|exlaz)\=.*?(?:\&|$)/gi, // Lazada
@@ -15,6 +17,7 @@ function decrap(url) {
     /(?:wt\.mc_id?)\=.*?$/, // WebTrends
     /(?:guccounter|guce_referrer|guce_referrer_sig)\=.*?$/, // Yahoo
     /(?:ftag|bhid)\=.*?$/, // Cnet
+    /(?:igsh)\=.*?$/, // Instagram
     /(?:mc_cid|mc_eid|cid)\=.*?$/, // Some other tracking shit
     /(?:s)\=\d+?$/, // Twitter shit
     /(?:\?|\&)$/gi, // Trailing ? or &
