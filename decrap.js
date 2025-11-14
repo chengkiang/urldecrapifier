@@ -2,7 +2,7 @@ const url = window.location.toString();
 
 function decrap(url) {
   const regexes = [
-    /(?:ref\=|qid|sr\=|keywords|pd_.*?|pf_.*?|refRID|psc|_encoding).*?(?:\&|$)/gi,  // Amazon
+    /(\/dp\/[A-Z0-9]{10}).*/i, // Amazon
     /(?:utm_.*?)(\&|$)/gi, // Google utm
     /(?:gad_.*?)(\&|$)/gi, // dunno-what tracking
     /(?:gbraid.*?)(\&|$)/gi, // dunno-what tracking
@@ -18,7 +18,7 @@ function decrap(url) {
     /(?:guccounter|guce_referrer|guce_referrer_sig)\=.*?$/, // Yahoo
     /(?:ftag|bhid)\=.*?$/, // Cnet
     /(?:igsh)\=.*?$/, // Instagram
-    /(?:mc_cid|mc_eid|cid)\=.*?$/, // Some other tracking shit
+    /(?:mc_cid|mc_eid|cid|srsltid|syclid)\=.*?$/, // Some other tracking shit
     /(?:s)\=\d+?$/, // Twitter shit
     /(?:\?|\&)$/gi, // Trailing ? or &
   ];
